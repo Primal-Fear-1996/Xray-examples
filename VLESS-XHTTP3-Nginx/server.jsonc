@@ -19,7 +19,13 @@
         "xhttpSettings": {
           "mode": "stream-one", //如在 config.jsonc 使用 downloadSettings（下行），不可用 stream-one；可用 stream-up。
           "path": "" // 填写你的 path
-        }
+        },
+	    "sockopt": {
+          "trustedXForwardedFor": [
+            "X-Real-IP",
+            "X-Forwarded-For"
+      ]
+    }
       }
     }
   ],
